@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Clients {
+public class Randomjava {
     public static void main(String[] arg) {
   
        String[] coin = {"king", "castle"};

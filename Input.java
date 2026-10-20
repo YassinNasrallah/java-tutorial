@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 
-public class Students {
+public class Input {
     public static void main(String[] args) {
         //variables
         boolean running = true; // use it for while loop
