@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Randomjava {
     public static void main(String[] arg) {
-  
+       
        String[] coin = {"king", "castle"};
        String UserCoin;
        boolean winner;
@@ -19,11 +19,5 @@ public class Randomjava {
         System.out.print("player lose");
         winner = false;
        }
-       
-
-
-
-
-       
     }
 }

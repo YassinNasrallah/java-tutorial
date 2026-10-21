@@ -4,40 +4,43 @@ public class Mathjava {
 
     public static void main(String[] args){
 
-        // Create a Scanner to read the user's input
-        // Ask the user to enter a value for x
-        // Read the value of x
-        // Check if the denominator is equal to zero
-        // If the denominator is zero, print that the function is undefined
-        // Otherwise, calculate f(x) = (x² + 3x - 4) / (x - 1)
-        // Print the result
-        
 
-        //varaible
-        int x;
-        int result;
+     // Compound interest 
 
+      Scanner scanner = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
-           
-        System.out.print("Enter the value of X : ");
-        x = scanner.nextInt();
-        
-        scanner.close();
-
-
-        if(result == 0){
-           System.out.println("is undifeind");
-        } else if(result > 0){
-            System.out.println("we got two solution");
-            int delta = Math.pow(b, 2) - 4*a*c ;
-        } else{
-            System.out.println("we got one solution");
-        }
+      // Compound interest formula:
+     // A = P * (1 + r / n) ^ (n * t)
+         
+      double P ; //principal
+      double r ; // rate
+      int n; // timesCompounded
+      int t ; // years
+      double A; // amount
       
 
-         
-         
 
+      // user input
+      System.out.print("Enter principal amount : ");
+      P = scanner.nextDouble();
+
+      System.out.print("Enter interest rate : ");
+      r = scanner.nextDouble() / 100;
+
+      System.out.print("Enter times Compounded");
+      n = scanner.nextInt();
+      
+      System.out.print("Enter how many years you leave your money in the bank : ");
+      t = scanner.nextInt();
+      
+      // problem solution
+      A = P * Math.pow(1 + r / n, n * t) ;
+
+      System.err.println("Amount After: " + t + " is " + A + "$") ;
+
+      scanner.close();
+
+
+      
     }
 }
