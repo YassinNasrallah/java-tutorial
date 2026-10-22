@@ -41,6 +41,6 @@ public class Mathjava {
       scanner.close();
 
 
-      
+
     }
 }
