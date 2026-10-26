@@ -2,12 +2,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Player {
-    public static void main(String[] arg){
-        int Playerheal = 100;
-        boolean isAlive = true;
+        static int Playerheal = 100;
+        static boolean isAlive = true;
         // player position
-        int x = 0;
-        int y = 0;
+        static int x = 0;
+        static  int y = 0;
+    public static void main(String[] arg){
+
 
         // player invetory
         ArrayList<String>Invetory = new ArrayList<>();
@@ -16,7 +17,7 @@ public class Player {
         if(isAlive){ 
         // player method
         playyerAction(scanner);
-        Playermovement(scanner, x , y);
+        Playermovement(scanner);
         }
         addItem(Invetory, scanner);
          scanner.close();
@@ -42,7 +43,7 @@ public class Player {
     }
 
 
-    static void Playermovement(Scanner scanner , int x , int y){
+    static void Playermovement(Scanner scanner ){
   
          String playerMovemnt;
   
