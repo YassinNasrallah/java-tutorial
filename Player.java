@@ -7,12 +7,13 @@ public class Player {
         // player position
         static int x = 0;
         static  int y = 0;
+
+       static  ArrayList<String>Invetory = new ArrayList<>();
     public static void main(String[] arg){
 
-
         // player invetory
-        ArrayList<String>Invetory = new ArrayList<>();
-
+        
+        
         Scanner scanner = new Scanner(System.in);
         if(isAlive){ 
         // player method
@@ -20,6 +21,7 @@ public class Player {
         Playermovement(scanner);
         }
         addItem(Invetory, scanner);
+        getItem(Invetory, scanner);
          scanner.close();
     }
 
@@ -60,12 +62,29 @@ public class Player {
          }
          System.out.println("Player position: (" + x + ", " + y + ")");
     }
+
     static void addItem(ArrayList<String> Invetory, Scanner scanner){
         String item;
         System.out.println("add item to invetory : ");
         item = scanner.nextLine();
-        Invetory.add(item);
-        System.out.println("invetory : " + Invetory);
+        
+        if(item!=""){
+             Invetory.add(item);
+             System.out.println("invetory : " + Invetory);
+        } else {
+             System.out.println("empty !!!");
+        }
+    }
+
+    static void getItem(ArrayList<String> Invetory,Scanner scanner){
+           String target;
+           System.out.println("get the item : ");
+           target = scanner.nextLine();
+          if(Invetory.contains(target)){
+            System.out.println("item is : " + target);
+          } else {
+            System.out.println("item not found ");
+          } 
     }
     
 }
